@@ -1,0 +1,30 @@
+o<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var base = 0;
+      var nota = 0;
+      var cantExamen = parseInt(prompt("Introducir cantidad de exámenes: "));
+      while (base < cantExamen) {
+        var sumaNotas = parseInt(
+          prompt(`Ahora ingresá la nota del exámen número ${base}:`)
+        );
+        if (sumaNotas < 0 || sumaNotas > 10 || sumaNotas === isNaN) {
+          alert("El rango de las calificaciones es de 0 a 10");
+          break;
+        }
+        base++;
+        nota += sumaNotas;
+      }
+      var resultadoFinal = nota / cantExamen;
+      resultadoFinal.toFixed(2);
+      alert("El promedio final es: " + resultadoFinal);
+    </script>
+  </body>
+</html>
